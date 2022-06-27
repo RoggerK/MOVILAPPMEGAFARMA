@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AppFarmacia</string>
+    <!--   Login   -->
+    <string name="Ingresa_nom">Ingresa tu correo</string>
+    <string name="Contrasena">Contraseña</string>
+    <string name="inicia_sesion">Iniciar Sesión</string>
+    <string name="registrarse_login">Registrate</string>
+
+    <!--   Registrarse      -->
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="celular">Celular</string>
+    <string name="DNI">DNI</string>
+    <string name="correo">Correo electronico</string>
+    <string name="nacimiento">F. nacimiento</string>
+    <string name="contrasena_registro">Contraseña</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Aceptar</string>
+
+
+
+</resources>
