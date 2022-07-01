@@ -11,6 +11,9 @@
     <color name="Fondo_login">#1a237e</color>
     <color name="botones">#000051</color>
 
+    <color name="fondo_registrar">#0d47a1</color>
 
-
+    <!-- colores botones -->
+    <color name="rojo_cancelar">#F80000</color>
+    <color name="verde_aceptar">#00BC13</color>
 </resources>

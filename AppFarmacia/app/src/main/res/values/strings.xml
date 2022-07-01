@@ -4,19 +4,21 @@
     <string name="Ingresa_nom">Ingresa tu correo</string>
     <string name="Contrasena">Contraseña</string>
     <string name="inicia_sesion">Iniciar Sesión</string>
-    <string name="registrarse_login">Registrate</string>
+    <string name="registrarse_login">Registrate !!!</string>
 
     <!--   Registrarse      -->
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
+    <string name="codigo_postal">Cod. Pais</string>
     <string name="celular">Celular</string>
+    <string name="documento">Tipo D.</string>
     <string name="DNI">DNI</string>
     <string name="correo">Correo electronico</string>
-    <string name="nacimiento">F. nacimiento</string>
+    <string name="nacimiento">Fecha de nacimiento</string>
     <string name="contrasena_registro">Contraseña</string>
     <string name="cancelar">Cancelar</string>
     <string name="aceptar">Aceptar</string>
 
-
+    <string name="tipos_correo">Correo Ejemplo</string>
 
 </resources>
