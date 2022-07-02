@@ -46,6 +46,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
+                android:id="@+id/txt_Nombre"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -64,6 +65,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
+                android:id="@+id/txt_Apellido"
                 android:layout_width="match_parent"
                 android:layout_height="58dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -87,6 +89,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
+                android:id="@+id/txt_CodPais"
                 android:layout_width="match_parent"
                 android:layout_height="64dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -107,6 +110,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
+                android:id="@+id/txt_Celular"
                 android:layout_width="224dp"
                 android:layout_height="64dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -132,6 +136,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
+                android:id="@+id/txt_TipDoc"
                 android:layout_width="match_parent"
                 android:layout_height="64dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -152,6 +157,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
 
+                android:id="@+id/txt_Dni"
                 android:layout_width="224dp"
                 android:layout_height="64dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -176,7 +182,7 @@
             app:startIconDrawable="@drawable/correo">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txt_correo"
+                android:id="@+id/txt_Correo"
                 android:layout_width="match_parent"
                 android:hint="@string/ht_correo"
                 android:layout_height="64dp" />
@@ -197,7 +203,7 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txt_fc_nacimiento"
+                android:id="@+id/txt_Fecha"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:hint="@string/ht_fc_nacimiento"
@@ -220,7 +226,7 @@
             app:startIconDrawable="@drawable/candado">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txt_contrasenia"
+                android:id="@+id/txt_Contrasenia"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:hint="@string/ht_contrasenia"
@@ -253,7 +259,7 @@
             android:paddingTop="8dp"/>
 
         <Button
-            android:id="@+id/bt_aceptar"
+            android:id="@+id/bt_Aceptar"
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

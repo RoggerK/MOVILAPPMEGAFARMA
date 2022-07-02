@@ -18,11 +18,11 @@ public class RegistrarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
 
-        EditText txt_correo = findViewById(R.id.txt_correo);
-        EditText txt_fc_nacimiento = findViewById(R.id.txt_fc_nacimiento);
-        EditText txt_contrasenia = findViewById(R.id.txt_contrasenia);
+        EditText txt_correo = findViewById(R.id.txt_Correo);
+        EditText txt_fc_nacimiento = findViewById(R.id.txt_Fecha);
+        EditText txt_contrasenia = findViewById(R.id.txt_Contrasenia);
 
-        Button bt_aceptar = findViewById(R.id.bt_aceptar);
+        Button bt_aceptar = findViewById(R.id.bt_Aceptar);
 
         bt_aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
