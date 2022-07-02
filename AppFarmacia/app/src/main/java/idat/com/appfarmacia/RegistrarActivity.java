@@ -151,8 +151,12 @@ public class RegistrarActivity extends AppCompatActivity {
                         "$"
         );
 
-        if (contrasenia.isEmpty()){
+        if (contrasenia.isEmpty()) {
             Toast.makeText(this, "El campo de contraseña esta vacia",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        } else if (contrasenia.length() > 8) {
+            Toast.makeText(this, "La contranseña no puede superar los 8 caracteres",
                     Toast.LENGTH_SHORT).show();
             return false;
         }else if (!passwordRegex.matcher(contrasenia).matches()){
