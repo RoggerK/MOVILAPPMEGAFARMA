@@ -3,8 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/candado.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/celar.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/correo.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/degradado.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/degradado_botones.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/documento.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/fecha.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/no.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/person.xml" value="0.1525" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/yes.xml" value="0.1525" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/layout/activity_registrar.xml" value="0.22685185185185186" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/layout/activity_registrar.xml" value="0.25" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/layout/lista_correo.xml" value="0.22685185185185186" />
         <entry key="..\:/IDAT_CICLO 5/VIERNES - DESARROLLO DE APPS  MOV. 1/AppFarmacia - MEGAFARMA - AndroidStudio/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2115" />
         <entry key="..\:/IDAT_CICLO 5/VIERNES - DESARROLLO DE APPS  MOV. 1/AppFarmacia - MEGAFARMA - AndroidStudio/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/drawable/degradado.xml" value="0.1945" />
