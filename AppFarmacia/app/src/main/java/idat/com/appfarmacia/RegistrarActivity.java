@@ -35,31 +35,38 @@ public class RegistrarActivity extends AppCompatActivity {
                 fc_nacimiento = txt_fc_nacimiento.getText().toString();
                 contrasenia = txt_contrasenia.getText().toString();
 
-                System.out.println(validarEmail(correo));
+                System.out.println(validarCorreo(correo));
 
                 System.out.println(validarFecha(fc_nacimiento));
 
-                //System.out.println(correo +" "+ fc_nacimiento +" "+ contrasenia);
+                System.out.println(validarContrasenia(contrasenia));
             }
         });
     }
 
     /**
-     * validarEmail(String correo):
+     * validarCorreo(String correo):
      *
      * Se instancia un patron, para ver el valor
-     * de correo si este tiene al menos un @ y .
+     * de correo si este tiene al menos un '@' y '.'
      *
-     * Caso contrario botaria un mensaje de no
-     * formate de correo
+     * . Caso contrario botaria un mensaje de error de
+     * formato de correo.
      *
+     * @author Curisinche Guia Kennedy
      * @param correo, de tipo String
      * @return boolean
      * */
 
-    private boolean validarEmail(String correo) {
+    private boolean validarCorreo(String correo) {
         Pattern pattern = Patterns.EMAIL_ADDRESS;
         boolean valor = pattern.matcher(correo).matches();
+
+        if (correo.isEmpty()){
+            Toast.makeText(this, "El campo de correo esta vacia",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
         if(!valor){
             Toast.makeText(this, "No se tiene un forma del correo",
@@ -75,7 +82,7 @@ public class RegistrarActivity extends AppCompatActivity {
      * Valida que sean numeros; sus longitudes
      * de año igual a 4, mes y dia igual a 1 o 2.
      * Por ultimo la excepcion de formato de fecha
-     * incorrecto se controla en conversion de numeros
+     * incorrecto se controla en conversion de numeros.
      *
      * @author Curisinche Guia Kennedy
      * @param fecha, foramto fecha aaaa/mm/dd o aaaa-mm-dd,
@@ -114,11 +121,48 @@ public class RegistrarActivity extends AppCompatActivity {
                 return false;
             }
         } catch (NumberFormatException e){
-            e.printStackTrace();
             Toast.makeText(this, "La fecha de nacimiento contiene letras o el formato de fecha es incorrecto",
                             Toast.LENGTH_SHORT).show();
             return false;
         }
+    }
+    /**
+     * validarContrasenia(String contrasenia):
+     *
+     * Validamos una contraseña con expresiones regulares
+     * con al menos un numero, letra minuscula, letra mayuscula,
+     * al menos alguno de estos caracteres especiales '@#$%^&+='
+     * . Se evalua si esta vacio el compa contraseña y por otro
+     * lado este verifica que si se cumplan las expresiones regulares
+     *
+     * @author Curisinche Guia Kennedy
+     * @param contrasenia, de tipo String
+     * @return boolean
+     * */
+    private boolean validarContrasenia(String contrasenia){
+        Pattern passwordRegex = Pattern.compile(
+                "^" +
+                        "(?=.*[0-9])" +         //al menos un numero
+                        "(?=.*[a-z])" +         //al menos una letra minusucla
+                        "(?=.*[A-Z])" +         //al menos una letra mayuscula
+                        "(?=.*[@#$%^&+=])" +    //algunos de ellos debe estar
+                        "(?=\\S+$)" +           //nada de espacios
+                        ".{4,}" +               //al menos 4 caracteres
+                        "$"
+        );
+
+        if (contrasenia.isEmpty()){
+            Toast.makeText(this, "El campo de contraseña esta vacia",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        }else if (!passwordRegex.matcher(contrasenia).matches()){
+            Toast.makeText(this, "El campo de contraseña no cumple con " +
+                            " los valores que deberia tener como a-z, A-z, 0-9 y @#$%^&+=",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
     }
 
 }
