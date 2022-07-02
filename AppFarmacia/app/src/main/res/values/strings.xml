@@ -21,4 +21,9 @@
 
     <string name="tipos_correo">Correo Ejemplo</string>
 
+    <!-- Mensaje ocultos -->
+    <string name="ht_correo">ejemplo@ejemplo.com</string>
+    <string name="ht_fc_nacimiento">aaaa-mm-dd</string>
+    <string name="ht_contrasenia">roG1@123</string>
+
 </resources>

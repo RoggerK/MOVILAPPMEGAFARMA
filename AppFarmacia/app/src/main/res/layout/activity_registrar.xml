@@ -176,8 +176,9 @@
             app:startIconDrawable="@drawable/correo">
 
             <com.google.android.material.textfield.TextInputEditText
-
+                android:id="@+id/txt_correo"
                 android:layout_width="match_parent"
+                android:hint="@string/ht_correo"
                 android:layout_height="64dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -196,9 +197,12 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-
+                android:id="@+id/txt_fc_nacimiento"
                 android:layout_width="match_parent"
-                android:layout_height="64dp" />
+                android:layout_height="64dp"
+                android:hint="@string/ht_fc_nacimiento"
+                android:maxLength="10"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -216,9 +220,12 @@
             app:startIconDrawable="@drawable/candado">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_contrasenia"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                android:inputType="textPassword" />
+                android:hint="@string/ht_contrasenia"
+                android:inputType="textPassword"
+                android:maxLength="10" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -246,18 +253,18 @@
             android:paddingTop="8dp"/>
 
         <Button
+            android:id="@+id/bt_aceptar"
+            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:icon="@drawable/yes"
-            android:layout_weight="1"
             android:layout_margin="5dp"
-            android:textSize="15dp"
+            android:layout_weight="1"
             android:backgroundTint="@color/verde_aceptar"
-            android:text="@string/aceptar"
-            android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            style="@style/Widget.MaterialComponents.Button.Icon"
-            />
+            android:paddingBottom="8dp"
+            android:text="@string/aceptar"
+            android:textSize="15dp"
+            app:icon="@drawable/yes" />
 
 
 
