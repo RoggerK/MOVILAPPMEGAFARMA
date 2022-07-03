@@ -30,29 +30,29 @@ public class RegistrarActivity extends AppCompatActivity {
         bt_aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String dnni = "";
+                String numcel = "";
                 String correo = "";
                 String fc_nacimiento = "";
                 String contrasenia = "";
-                String dnni = "";
-                String numcel = "";
+
+                dnni = txt_dni.getText().toString();
+                numcel = txt_nucel.getText().toString();
 
                 correo = txt_correo.getText().toString();
                 fc_nacimiento = txt_fc_nacimiento.getText().toString();
                 contrasenia = txt_contrasenia.getText().toString();
 
-                dnni = txt_dni.getText().toString();
-                numcel = txt_nucel.getText().toString();
+
+                System.out.println(validarNumCel(numcel));
+
+                System.out.println(validarDNI(dnni));
 
                 System.out.println(validarCorreo(correo));
 
                 System.out.println(validarFecha(fc_nacimiento));
 
                 System.out.println(validarContrasenia(contrasenia));
-
-                System.out.println(validarNumCel(numcel));
-
-                System.out.println(validarDNI(dnni));
-
 
             }
         });
