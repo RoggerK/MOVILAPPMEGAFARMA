@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppFarmacia</string>
+    <!--   Login   -->
+    <string name="Ingresa_nom">Write your email</string>
+    <string name="Contrasena">Write your password</string>
+    <string name="inicia_sesion">Login</string>
+    <string name="registrarse_login">Register</string>
+
+    <!--   Registrarse      -->
+    <string name="nombre">Name</string>
+    <string name="apellido">Last name</string>
+    <string name="codigo_postal">Cod. Country</string>
+    <string name="celular">Cell phone</string>
+    <string name="documento">Type Doc</string>
+    <string name="DNI">Id Card</string>
+    <string name="correo">Email</string>
+    <string name="nacimiento">Date of Birth</string>
+    <string name="contrasena_registro">Password</string>
+    <string name="cancelar">Cancel</string>
+    <string name="aceptar">Accept</string>
+
+    <string name="tipos_correo">Email Example</string>
+
+    <!-- Mensaje ocultos -->
+    <string name="ht_correo">example@example.com</string>
+    <string name="ht_fc_nacimiento">yyyy-mm-dd</string>
+    <string name="ht_contrasenia">roG1@123</string>
+
+</resources>
