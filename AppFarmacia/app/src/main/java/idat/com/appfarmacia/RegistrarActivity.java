@@ -191,8 +191,8 @@ public class RegistrarActivity extends AppCompatActivity {
                 Toast.makeText(this, "El campo de DNI esta vacia",
                         Toast.LENGTH_SHORT).show();
                 return false;
-            } else if (dnni.length() > 10) {
-                Toast.makeText(this, "El DNI no puede superar los 10 caracteres",
+            } else if (dnni.length() >= 9) {
+                Toast.makeText(this, "El DNI solo acepta 8 caracteres",
                         Toast.LENGTH_SHORT).show();
                 return false;
             } else if(!valorDni){
@@ -201,10 +201,6 @@ public class RegistrarActivity extends AppCompatActivity {
                 return false;
             } else if (dnni.length() < 8){
                 Toast.makeText(this, "El DNI debe tener 8 dígitos como mínimo",
-                        Toast.LENGTH_SHORT).show();
-                return false;
-            } else if (dnni.length() == 9) {
-                Toast.makeText(this, "El DNI no puede tener 9 dígitos",
                         Toast.LENGTH_SHORT).show();
                 return false;
             }
@@ -223,15 +219,15 @@ public class RegistrarActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             return false;
         } else if(numcel.length() > 9) {
-            Toast.makeText(this, "El campo de celular debe tener solo 9 dígitos",
+            Toast.makeText(this, "El campo de celular no debe superar los 9 dígitos",
                     Toast.LENGTH_SHORT).show();
             return false;
         } else if(!valorCel){
-            Toast.makeText(this, "El campo de celular solo puede tener números",
+            Toast.makeText(this, "El campo de celular no puede tener letras",
                     Toast.LENGTH_SHORT).show();
             return false;
-        } else if(numcel.length() < 9){
-            Toast.makeText(this, "El campo de celular debe tener 9 solo dígitos",
+        } else if(numcel.length() < 9 ){
+            Toast.makeText(this, "El campo de celular debe tener 9 dígitos",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
