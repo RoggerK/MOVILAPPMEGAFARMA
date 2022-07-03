@@ -22,6 +22,9 @@ public class RegistrarActivity extends AppCompatActivity {
         EditText txt_fc_nacimiento = findViewById(R.id.txt_Fecha);
         EditText txt_contrasenia = findViewById(R.id.txt_Contrasenia);
 
+        EditText txt_dni = findViewById(R.id.txt_Dni);
+        EditText txt_nucel = findViewById(R.id.txt_Celular);
+
         Button bt_aceptar = findViewById(R.id.bt_Aceptar);
 
         bt_aceptar.setOnClickListener(new View.OnClickListener() {
@@ -30,16 +33,27 @@ public class RegistrarActivity extends AppCompatActivity {
                 String correo = "";
                 String fc_nacimiento = "";
                 String contrasenia = "";
+                String dnni = "";
+                String numcel = "";
 
                 correo = txt_correo.getText().toString();
                 fc_nacimiento = txt_fc_nacimiento.getText().toString();
                 contrasenia = txt_contrasenia.getText().toString();
+
+                dnni = txt_dni.getText().toString();
+                numcel = txt_nucel.getText().toString();
 
                 System.out.println(validarCorreo(correo));
 
                 System.out.println(validarFecha(fc_nacimiento));
 
                 System.out.println(validarContrasenia(contrasenia));
+
+                System.out.println(validarNumCel(numcel));
+
+                System.out.println(validarDNI(dnni));
+
+
             }
         });
     }
@@ -168,5 +182,55 @@ public class RegistrarActivity extends AppCompatActivity {
 
         return true;
     }
+
+    private boolean validarDNI(String dnni) {
+        Pattern pati = Patterns.PHONE;
+        boolean valorDni = pati.matcher(dnni).matches();
+
+            if (dnni.isEmpty()) {
+                Toast.makeText(this, "El campo de DNI esta vacia",
+                        Toast.LENGTH_SHORT).show();
+                return false;
+            } else if (dnni.length() > 10) {
+                Toast.makeText(this, "El DNI no puede superar los 10 caracteres",
+                        Toast.LENGTH_SHORT).show();
+                return false;
+            } else if(!valorDni){
+                Toast.makeText(this, "El DNI no puede tener letras",
+                        Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+
+            return true;
+
+    }
+
+    private boolean validarNumCel(String numcel){
+
+        Pattern pati = Patterns.PHONE;
+        boolean valorCel = pati.matcher(numcel).matches();
+
+        if(numcel.isEmpty()){
+            Toast.makeText(this, "El campo de número de celular esta vacia",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        } else if(numcel.length() > 9) {
+            Toast.makeText(this, "El campo de celular debe tener solo 9 dígitos",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        } else if(!valorCel){
+            Toast.makeText(this, "El campo de celular solo puede tener números",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        } else if(numcel.length() < 9){
+            Toast.makeText(this, "El campo de celular debe tener 9 solo dígitos",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
+    }
+
 
 }
