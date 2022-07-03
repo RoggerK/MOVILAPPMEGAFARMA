@@ -199,8 +199,15 @@ public class RegistrarActivity extends AppCompatActivity {
                 Toast.makeText(this, "El DNI no puede tener letras",
                         Toast.LENGTH_SHORT).show();
                 return false;
+            } else if (dnni.length() < 8){
+                Toast.makeText(this, "El DNI debe tener 8 dígitos como mínimo",
+                        Toast.LENGTH_SHORT).show();
+                return false;
+            } else if (dnni.length() == 9) {
+                Toast.makeText(this, "El DNI no puede tener 9 dígitos",
+                        Toast.LENGTH_SHORT).show();
+                return false;
             }
-
 
             return true;
 
