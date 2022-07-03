@@ -8,15 +8,14 @@
     tools:context=".RegistrarActivity"
     android:background="@color/fondo_registrar"
     android:orientation="vertical"
-
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginBottom="8dp"
-        android:background="@color/botones">
+        android:background="@color/botones"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -28,253 +27,247 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <!--   parte del formulario   -->
-
-        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:background="@color/white"
-            android:hint="@string/nombre"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/person"
-            >
+            android:orientation="vertical">
+            <!--   parte del formulario   -->
 
-            <com.google.android.material.textfield.TextInputEditText
-
-                android:id="@+id/txt_Nombre"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@color/white"
+                android:hint="@string/nombre"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/person">
 
-        <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/txt_Nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/apellido"
+                android:paddingTop="10dp"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/person">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/txt_Apellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/apellido"
-            android:paddingTop="10dp"
-            app:endIconMode="clear_text"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/person">
+            android:orientation="horizontal">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/codigo_postal"
+                android:paddingTop="10dp"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white">
 
-                android:id="@+id/txt_Apellido"
-                android:layout_width="match_parent"
-                android:layout_height="58dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-</LinearLayout>
+                <com.google.android.material.textfield.TextInputEditText
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                    android:id="@+id/txt_CodPais"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="112dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="199dp"
+                android:layout_height="76dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/celular"
+                android:paddingTop="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="9"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/celar">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/txt_Celular"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/codigo_postal"
-            android:paddingTop="10dp"
-            app:endIconMode="clear_text"
-            app:hintTextColor="@color/white">
+            android:orientation="horizontal">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/documento"
+                android:paddingTop="10dp"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white">
 
-                android:id="@+id/txt_CodPais"
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/txt_TipDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/DNI"
+                android:paddingTop="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/documento">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="199dp"
-            android:layout_height="76dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/celular"
-            android:paddingTop="10dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="9"
-            app:endIconMode="clear_text"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/celar">
+                <com.google.android.material.textfield.TextInputEditText
 
-            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_Dni"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
-                android:id="@+id/txt_Celular"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="247dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/correo"
+                android:paddingTop="10dp"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/correo">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_Correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:hint="@string/ht_correo" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="112dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/documento"
-            android:paddingTop="10dp"
-            app:endIconMode="clear_text"
-            app:hintTextColor="@color/white">
-
-            <com.google.android.material.textfield.TextInputEditText
-
-                android:id="@+id/txt_TipDoc"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/nacimiento"
+                android:paddingTop="10dp"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/fecha"
 
-        <com.google.android.material.textfield.TextInputLayout
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_Fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:hint="@string/ht_fc_nacimiento"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/Contrasena"
+                android:paddingTop="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                app:endIconMode="password_toggle"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/candado">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_Contrasenia"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:hint="@string/ht_contrasenia"
+                    android:inputType="textPassword"
+                    android:maxLength="10" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/DNI"
-            android:paddingTop="10dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="8"
-            app:endIconMode="clear_text"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/documento">
-
-            <com.google.android.material.textfield.TextInputEditText
-
-                android:id="@+id/txt_Dni"
-                android:layout_width="match_parent"
-                android:layout_height="64dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="247dp"
-        android:layout_marginBottom="15dp"
-        android:orientation="vertical">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/correo"
-            android:paddingTop="10dp"
-            app:endIconMode="clear_text"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/correo">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txt_Correo"
-                android:layout_width="match_parent"
-                android:hint="@string/ht_correo"
-                android:layout_height="64dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="5dp"
-            android:hint="@string/nacimiento"
-            android:paddingTop="10dp"
-            app:endIconMode="clear_text"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/fecha"
-
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txt_Fecha"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:hint="@string/ht_fc_nacimiento"
-                android:maxLength="10"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="5dp"
-            android:hint="@string/Contrasena"
-            android:paddingTop="10dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="8"
-            app:endIconMode="password_toggle"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/candado">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txt_Contrasenia"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:hint="@string/ht_contrasenia"
-                android:inputType="textPassword"
-                android:maxLength="10" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_margin="5dp">
-
-        <Button
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_weight="1"
             android:layout_margin="5dp"
-            android:backgroundTint="@color/rojo_cancelar"
-            android:text="@string/cancelar"
-            android:textSize="15dp"
-            app:icon="@drawable/no"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"/>
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/bt_Aceptar"
-            style="@style/Widget.MaterialComponents.Button.Icon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/verde_aceptar"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="@string/aceptar"
-            android:textSize="15dp"
-            app:icon="@drawable/yes" />
+            <Button
 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/rojo_cancelar"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/cancelar"
+                android:textSize="15dp"
+                app:icon="@drawable/no" />
 
-    </LinearLayout>
-
+            <Button
+                android:id="@+id/bt_Aceptar"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/verde_aceptar"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/aceptar"
+                android:textSize="15dp"
+                app:icon="@drawable/yes" />
+        </LinearLayout>
 
 </LinearLayout>
