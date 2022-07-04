@@ -26,4 +26,8 @@
     <string name="ht_fc_nacimiento">aaaa-mm-dd</string>
     <string name="ht_contrasenia">roG1@123</string>
 
+
+    <!--  Principal activity   -->
+    <string name="salir" translatable="false">Salir</string>
+    <string name="producto" translatable="false">Productos</string>
 </resources>
