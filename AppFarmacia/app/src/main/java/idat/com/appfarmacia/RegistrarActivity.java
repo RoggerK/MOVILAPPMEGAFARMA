@@ -34,36 +34,28 @@ public class RegistrarActivity extends AppCompatActivity {
         bt_aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nombre = "";
-                String apellido = "";
-                String dnni = "";
-                String numcel = "";
-                String correo = "";
-                String fc_nacimiento = "";
-                String contrasenia = "";
+                String nombre = txt_nombre.getText().toString().trim();
+                String apellido = txt_apellido.getText().toString().trim();
+                String dni = txt_dni.getText().toString();
+                String numcel = txt_nucel.getText().toString();
+                String correo = txt_correo.getText().toString();
+                String fc_nacimiento = txt_fc_nacimiento.getText().toString();
+                String contrasenia = txt_contrasenia.getText().toString();
 
-                nombre = txt_nombre.getText().toString().trim();
-                apellido = txt_apellido.getText().toString().trim();
-                dnni = txt_dni.getText().toString();
-                numcel = txt_nucel.getText().toString();
+                boolean rsnombre = validarNombre(nombre);
+                boolean rsapellido = validarApellido(apellido);
+                boolean rscelular = validarNumCel(numcel);
+                boolean rsdni = validarDNI(dni);
+                boolean rscorreo = validarCorreo(correo);
+                boolean rsfc_nacimiento = validarFecha(fc_nacimiento);
+                boolean rscontrasenia = validarContrasenia(contrasenia);
 
-                correo = txt_correo.getText().toString();
-                fc_nacimiento = txt_fc_nacimiento.getText().toString();
-                contrasenia = txt_contrasenia.getText().toString();
-
-                System.out.println(validarNombre(nombre));
-
-                System.out.println(validarApellido(apellido));
-
-                System.out.println(validarNumCel(numcel));
-
-                System.out.println(validarDNI(dnni));
-
-                System.out.println(validarCorreo(correo));
-
-                System.out.println(validarFecha(fc_nacimiento));
-
-                System.out.println(validarContrasenia(contrasenia));
+                if(rsnombre && rsapellido && rscelular && rsdni && rscorreo && rsfc_nacimiento
+                        && rscontrasenia) {
+                    mess_registrado();
+                } else {
+                    mess_noregistrado();
+                }
 
             }
         });
@@ -76,11 +68,26 @@ public class RegistrarActivity extends AppCompatActivity {
         });
     }
 
+    private void mess_registrado(){
+        Intent intent = new Intent (this, MainActivity.class);
+
+        Toast.makeText(this, "Registro completado",
+                Toast.LENGTH_SHORT).show();
+
+        startActivity(intent);
+    }
+
+    private void mess_noregistrado(){
+        Toast.makeText(this, "Debes corregir las observaciones dadas",
+                Toast.LENGTH_SHORT).show();
+    }
+
     private void cancelar(){
         Intent intent = new Intent (this, MainActivity.class);
 
         startActivity(intent);
     }
+
     private boolean validarNombre(String nombre) {
         Pattern nombreRegex = Pattern.compile(
                 "^" +
