@@ -2,6 +2,7 @@ package idat.com.appfarmacia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -18,6 +19,8 @@ public class RegistrarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
 
+        EditText txt_nombre = findViewById(R.id.txt_Nombre);
+        EditText txt_apellido = findViewById(R.id.txt_Apellido);
         EditText txt_correo = findViewById(R.id.txt_Correo);
         EditText txt_fc_nacimiento = findViewById(R.id.txt_Fecha);
         EditText txt_contrasenia = findViewById(R.id.txt_Contrasenia);
@@ -26,15 +29,21 @@ public class RegistrarActivity extends AppCompatActivity {
         EditText txt_nucel = findViewById(R.id.txt_Celular);
 
         Button bt_aceptar = findViewById(R.id.bt_Aceptar);
+        Button bt_cancelar = findViewById(R.id.bt_Cancelar);
 
         bt_aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String nombre = "";
+                String apellido = "";
                 String dnni = "";
                 String numcel = "";
                 String correo = "";
                 String fc_nacimiento = "";
                 String contrasenia = "";
+
+                nombre = txt_nombre.getText().toString().trim();
+                apellido = txt_apellido.getText().toString().trim();
 
                 dnni = txt_dni.getText().toString();
                 numcel = txt_nucel.getText().toString();
@@ -43,7 +52,10 @@ public class RegistrarActivity extends AppCompatActivity {
                 fc_nacimiento = txt_fc_nacimiento.getText().toString();
                 contrasenia = txt_contrasenia.getText().toString();
 
-                validarCampos();
+
+                System.out.println(validarNombre(nombre));
+
+                System.out.println(validarApellido(apellido));
 
                 System.out.println(validarNumCel(numcel));
 
@@ -57,75 +69,42 @@ public class RegistrarActivity extends AppCompatActivity {
 
             }
         });
+
+        bt_cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancelar();
+            }
+        });
     }
 
-    private void validarCampos() {
-        EditText txt_nombre = findViewById(R.id.txt_Nombre);
-        EditText txt_apellido = findViewById(R.id.txt_Apellido);
-        EditText txt_codPais = findViewById(R.id.txt_CodPais);
-        EditText txt_celular = findViewById(R.id.txt_Celular);
-        EditText txt_tipDoc = findViewById(R.id.txt_TipDoc);
-        EditText txt_dni = findViewById(R.id.txt_Dni);
-        EditText txt_correo = findViewById(R.id.txt_Correo);
-        EditText txt_fecha = findViewById(R.id.txt_Fecha);
-        EditText txt_contrasenia = findViewById(R.id.txt_Contrasenia);
+    private void cancelar(){
+        Intent intent = new Intent (this, MainActivity.class);
 
-        String nombre = txt_nombre.getText().toString().trim();
-        String apellido = txt_apellido.getText().toString().trim();
-        String codPais = txt_codPais.getText().toString().trim();
-        String celular = txt_celular.getText().toString().trim();
-        String tipDoc = txt_tipDoc.getText().toString().trim();
-        String dni = txt_dni.getText().toString().trim();
-        String correo = txt_correo.getText().toString().trim();
-        String fecha = txt_fecha.getText().toString().trim();
-        String contrasenia = txt_contrasenia.getText().toString().trim();
+        startActivity(intent);
+    }
+    private boolean validarNombre(String nombre) {
+        boolean valor = true;
 
-        if (!nombre.isEmpty()){
-            if (!apellido.isEmpty()){
-                if (!codPais.isEmpty()){
-                    if (!celular.isEmpty()){
-                        if (!tipDoc.isEmpty()){
-                            if (!dni.isEmpty()){
-                                if (!correo.isEmpty()){
-                                    if (!fecha.isEmpty()){
-                                        if (!contrasenia.isEmpty()){
-                                            Toast.makeText(this,"Registro correcto", Toast.LENGTH_SHORT).show();
-                                        }
-                                        else{
-                                            Toast.makeText(this,"Debe ingresar Contraseña", Toast.LENGTH_SHORT).show();
-                                        }
-                                    }
-                                    else{
-                                        Toast.makeText(this,"Debe ingresar Nacimiento", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                                else{
-                                    Toast.makeText(this,"Debe ingresar Correo", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                            else{
-                                Toast.makeText(this,"Debe ingresar Documento", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                        else{
-                            Toast.makeText(this,"Debe ingresar Tipo Documento", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    else{
-                        Toast.makeText(this,"Debe ingresar Celular", Toast.LENGTH_SHORT).show();
-                    }
-                }
-                else{
-                    Toast.makeText(this,"Debe ingresar Código de País", Toast.LENGTH_SHORT).show();
-                }
-            }
-            else{
-                Toast.makeText(this,"Debe ingresar Apellido", Toast.LENGTH_SHORT).show();
-            }
+        if (nombre.isEmpty()){
+            Toast.makeText(this, "El campo de nombre esta vacio",
+                    Toast.LENGTH_SHORT).show();
+            valor = false;
         }
-        else{
-            Toast.makeText(this,"Debe ingresar Nombre", Toast.LENGTH_SHORT).show();
+
+        return valor;
+    }
+
+    private boolean validarApellido(String apellido) {
+        boolean valor = true;
+
+        if (apellido.isEmpty()){
+            Toast.makeText(this, "El campo de apellido esta vacio",
+                    Toast.LENGTH_SHORT).show();
+            valor = false;
         }
+
+        return valor;
     }
 
     /**
