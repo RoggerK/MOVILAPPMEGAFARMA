@@ -43,6 +43,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 fc_nacimiento = txt_fc_nacimiento.getText().toString();
                 contrasenia = txt_contrasenia.getText().toString();
 
+                validarCampos();
 
                 System.out.println(validarNumCel(numcel));
 
@@ -56,6 +57,75 @@ public class RegistrarActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void validarCampos() {
+        EditText txt_nombre = findViewById(R.id.txt_Nombre);
+        EditText txt_apellido = findViewById(R.id.txt_Apellido);
+        EditText txt_codPais = findViewById(R.id.txt_CodPais);
+        EditText txt_celular = findViewById(R.id.txt_Celular);
+        EditText txt_tipDoc = findViewById(R.id.txt_TipDoc);
+        EditText txt_dni = findViewById(R.id.txt_Dni);
+        EditText txt_correo = findViewById(R.id.txt_Correo);
+        EditText txt_fecha = findViewById(R.id.txt_Fecha);
+        EditText txt_contrasenia = findViewById(R.id.txt_Contrasenia);
+
+        String nombre = txt_nombre.getText().toString().trim();
+        String apellido = txt_apellido.getText().toString().trim();
+        String codPais = txt_codPais.getText().toString().trim();
+        String celular = txt_celular.getText().toString().trim();
+        String tipDoc = txt_tipDoc.getText().toString().trim();
+        String dni = txt_dni.getText().toString().trim();
+        String correo = txt_correo.getText().toString().trim();
+        String fecha = txt_fecha.getText().toString().trim();
+        String contrasenia = txt_contrasenia.getText().toString().trim();
+
+        if (!nombre.isEmpty()){
+            if (!apellido.isEmpty()){
+                if (!codPais.isEmpty()){
+                    if (!celular.isEmpty()){
+                        if (!tipDoc.isEmpty()){
+                            if (!dni.isEmpty()){
+                                if (!correo.isEmpty()){
+                                    if (!fecha.isEmpty()){
+                                        if (!contrasenia.isEmpty()){
+                                            Toast.makeText(this,"Registro correcto", Toast.LENGTH_SHORT).show();
+                                        }
+                                        else{
+                                            Toast.makeText(this,"Debe ingresar Contraseña", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                    else{
+                                        Toast.makeText(this,"Debe ingresar Nacimiento", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                else{
+                                    Toast.makeText(this,"Debe ingresar Correo", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                            else{
+                                Toast.makeText(this,"Debe ingresar Documento", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else{
+                            Toast.makeText(this,"Debe ingresar Tipo Documento", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else{
+                        Toast.makeText(this,"Debe ingresar Celular", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else{
+                    Toast.makeText(this,"Debe ingresar Código de País", Toast.LENGTH_SHORT).show();
+                }
+            }
+            else{
+                Toast.makeText(this,"Debe ingresar Apellido", Toast.LENGTH_SHORT).show();
+            }
+        }
+        else{
+            Toast.makeText(this,"Debe ingresar Nombre", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
