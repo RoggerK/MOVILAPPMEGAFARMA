@@ -14,6 +14,8 @@
     <color name="fondo_registrar">#0d47a1</color>
 
     <!-- colores botones -->
-    <color name="rojo_cancelar">#F80000</color>
+    <color name="rojo_cancelar">#E40606</color>
     <color name="verde_aceptar">#00BC13</color>
+    <color name="azul_principal">#8AB9DF</color>
+    <color name="blanco_principal">#fff</color>
 </resources>
