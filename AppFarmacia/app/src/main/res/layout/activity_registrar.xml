@@ -160,19 +160,20 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
-                android:hint="@string/nacimiento"
+                app:helperTextTextColor="@color/white"
+                app:helperText="@string/ht_fc_nacimiento"
                 android:paddingTop="10dp"
                 app:endIconMode="clear_text"
                 app:hintTextColor="@color/white"
                 app:startIconDrawable="@drawable/fecha"
-
+                android:hint="@string/nacimiento"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_Fecha"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/ht_fc_nacimiento"
+
                     android:maxLength="10" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -182,7 +183,8 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
-                android:hint="@string/Contrasena"
+               app:helperText="@string/ht_contrasenia"
+                app:helperTextTextColor="@color/white"
                 android:paddingTop="10dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="8"
@@ -194,7 +196,7 @@
                     android:id="@+id/txt_Contrasenia"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/ht_contrasenia"
+                    android:hint="@string/Contrasena"
                     android:inputType="textPassword"
                     android:maxLength="10" />
 
