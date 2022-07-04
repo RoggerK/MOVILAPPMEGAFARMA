@@ -2,6 +2,7 @@ package idat.com.appfarmacia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -18,6 +19,8 @@ public class RegistrarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
 
+        EditText txt_nombre = findViewById(R.id.txt_Nombre);
+        EditText txt_apellido = findViewById(R.id.txt_Apellido);
         EditText txt_correo = findViewById(R.id.txt_Correo);
         EditText txt_fc_nacimiento = findViewById(R.id.txt_Fecha);
         EditText txt_contrasenia = findViewById(R.id.txt_Contrasenia);
@@ -26,16 +29,21 @@ public class RegistrarActivity extends AppCompatActivity {
         EditText txt_nucel = findViewById(R.id.txt_Celular);
 
         Button bt_aceptar = findViewById(R.id.bt_Aceptar);
+        Button bt_cancelar = findViewById(R.id.bt_Cancelar);
 
         bt_aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String nombre = "";
+                String apellido = "";
                 String dnni = "";
                 String numcel = "";
                 String correo = "";
                 String fc_nacimiento = "";
                 String contrasenia = "";
 
+                nombre = txt_nombre.getText().toString().trim();
+                apellido = txt_apellido.getText().toString().trim();
                 dnni = txt_dni.getText().toString();
                 numcel = txt_nucel.getText().toString();
 
@@ -43,6 +51,9 @@ public class RegistrarActivity extends AppCompatActivity {
                 fc_nacimiento = txt_fc_nacimiento.getText().toString();
                 contrasenia = txt_contrasenia.getText().toString();
 
+                System.out.println(validarNombre(nombre));
+
+                System.out.println(validarApellido(apellido));
 
                 System.out.println(validarNumCel(numcel));
 
@@ -56,6 +67,42 @@ public class RegistrarActivity extends AppCompatActivity {
 
             }
         });
+
+        bt_cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancelar();
+            }
+        });
+    }
+
+    private void cancelar(){
+        Intent intent = new Intent (this, MainActivity.class);
+
+        startActivity(intent);
+    }
+    private boolean validarNombre(String nombre) {
+        boolean valor = true;
+
+        if (nombre.isEmpty()){
+            Toast.makeText(this, "El campo de nombre esta vacio",
+                    Toast.LENGTH_SHORT).show();
+            valor = false;
+        }
+
+        return valor;
+    }
+
+    private boolean validarApellido(String apellido) {
+        boolean valor = true;
+
+        if (apellido.isEmpty()){
+            Toast.makeText(this, "El campo de apellido esta vacio",
+                    Toast.LENGTH_SHORT).show();
+            valor = false;
+        }
+
+        return valor;
     }
 
     /**

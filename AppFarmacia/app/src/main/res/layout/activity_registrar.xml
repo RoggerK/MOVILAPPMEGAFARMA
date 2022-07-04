@@ -205,9 +205,10 @@
 
         <Button
 
+            android:id="@+id/bt_Cancelar"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
 
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:backgroundTint="@color/rojo_cancelar"
             android:paddingTop="8dp"
