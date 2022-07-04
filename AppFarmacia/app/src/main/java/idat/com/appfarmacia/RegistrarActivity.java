@@ -82,27 +82,42 @@ public class RegistrarActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private boolean validarNombre(String nombre) {
-        boolean valor = true;
 
-        if (nombre.isEmpty()){
-            Toast.makeText(this, "El campo de nombre esta vacio",
+        try {
+            Integer.parseInt(nombre);
+
+            Toast.makeText(this, "El campo nombre no puede llevar numeros",
                     Toast.LENGTH_SHORT).show();
-            valor = false;
-        }
 
-        return valor;
+            return false;
+        } catch (Exception e){
+            if (nombre.isEmpty()){
+                Toast.makeText(this, "El campo de nombre esta vacio",
+                        Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            return true;
+        }
     }
 
     private boolean validarApellido(String apellido) {
-        boolean valor = true;
+        try {
+            Integer.parseInt(apellido);
 
-        if (apellido.isEmpty()){
-            Toast.makeText(this, "El campo de apellido esta vacio",
+            Toast.makeText(this, "El campo apellido puede llevar numeros",
                     Toast.LENGTH_SHORT).show();
-            valor = false;
-        }
 
-        return valor;
+            return false;
+        } catch (Exception e) {
+            if (apellido.isEmpty()){
+                Toast.makeText(this, "El campo de apellido esta vacio",
+                        Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            return true;
+        }
     }
 
     /**
