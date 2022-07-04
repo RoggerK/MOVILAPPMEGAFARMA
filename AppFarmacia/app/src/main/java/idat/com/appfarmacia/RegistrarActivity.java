@@ -95,8 +95,7 @@ public class RegistrarActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             return false;
         }else if (!nombreRegex.matcher(nombre).matches()){
-            Toast.makeText(this, "El campo nombre no puede aceptar numeros, ni " +
-                            "caracteres especiales",
+            Toast.makeText(this, "El campo nombre debe tener al menos una minuscula y una mayuscula",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -119,8 +118,7 @@ public class RegistrarActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
             return false;
         }else if (!apellidoRegex.matcher(apellido).matches()){
-            Toast.makeText(this, "El campo apellido no puede aceptar numeros, ni " +
-                            "caracteres especiales",
+            Toast.makeText(this, "El campo apellido debe tener al menos una minuscula y una mayuscula",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
