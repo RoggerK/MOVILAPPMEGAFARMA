@@ -42,6 +42,13 @@ public class RegistrarActivity extends AppCompatActivity {
                 String fc_nacimiento = txt_fc_nacimiento.getText().toString();
                 String contrasenia = txt_contrasenia.getText().toString();
 
+                boolean rsregistro = respuesta(nombre,apellido,numcel,dni,correo, fc_nacimiento, contrasenia);
+
+                if (rsregistro){
+                    mess_registrado();
+                }
+
+                /*
                 boolean rsnombre = validarNombre(nombre);
                 boolean rsapellido = validarApellido(apellido);
                 boolean rscelular = validarNumCel(numcel);
@@ -50,13 +57,14 @@ public class RegistrarActivity extends AppCompatActivity {
                 boolean rsfc_nacimiento = validarFecha(fc_nacimiento);
                 boolean rscontrasenia = validarContrasenia(contrasenia);
 
+
                 if(rsnombre && rsapellido && rscelular && rsdni && rscorreo && rsfc_nacimiento
                         && rscontrasenia) {
                     mess_registrado();
                 } else {
                     mess_noregistrado();
                 }
-
+                */
             }
         });
 
@@ -68,6 +76,27 @@ public class RegistrarActivity extends AppCompatActivity {
         });
     }
 
+    private boolean respuesta(String nombre, String apellido, String numcel, String dni,
+                              String correo, String fc_nacimiento, String contrasenia){
+        if (validarNombre(nombre)){
+            if (validarApellido(apellido)){
+                if (validarNumCel(numcel)){
+                    if (validarDNI(dni)){
+                        if (validarCorreo(correo)){
+                            if (validarFecha(fc_nacimiento)){
+                                if(validarContrasenia(contrasenia)){
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
     private void mess_registrado(){
         Intent intent = new Intent (this, MainActivity.class);
 
@@ -75,11 +104,6 @@ public class RegistrarActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
 
         startActivity(intent);
-    }
-
-    private void mess_noregistrado(){
-        Toast.makeText(this, "Debes corregir las observaciones dadas",
-                Toast.LENGTH_SHORT).show();
     }
 
     private void cancelar(){
@@ -212,6 +236,10 @@ public class RegistrarActivity extends AppCompatActivity {
         } catch (NumberFormatException e){
             Toast.makeText(this, "La fecha de nacimiento contiene letras o el formato de fecha es incorrecto",
                             Toast.LENGTH_SHORT).show();
+            return false;
+        } catch (ArrayIndexOutOfBoundsException e){
+            Toast.makeText(this, "La fecha debe esta compuesta por año-mes-dia",
+                    Toast.LENGTH_SHORT).show();
             return false;
         }
     }
