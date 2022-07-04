@@ -82,42 +82,50 @@ public class RegistrarActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private boolean validarNombre(String nombre) {
+        Pattern nombreRegex = Pattern.compile(
+                "^" +
+                        "(?=.*[a-z])" +         //al menos una letra minusucla
+                        "(?=.*[A-Z])" +         //al menos una letra mayuscula
+                        ".{4,}" +               //al menos 4 caracteres
+                        "$"
+        );
 
-        try {
-            Integer.parseInt(nombre);
-
-            Toast.makeText(this, "El campo nombre no puede llevar numeros",
+        if (nombre.isEmpty()) {
+            Toast.makeText(this, "El campo de nombre esta vacio",
                     Toast.LENGTH_SHORT).show();
-
             return false;
-        } catch (Exception e){
-            if (nombre.isEmpty()){
-                Toast.makeText(this, "El campo de nombre esta vacio",
-                        Toast.LENGTH_SHORT).show();
-                return false;
-            }
-
-            return true;
+        }else if (!nombreRegex.matcher(nombre).matches()){
+            Toast.makeText(this, "El campo nombre no puede aceptar numeros, ni " +
+                            "caracteres especiales",
+                    Toast.LENGTH_SHORT).show();
+            return false;
         }
+
+        return true;
     }
 
     private boolean validarApellido(String apellido) {
-        try {
-            Integer.parseInt(apellido);
 
-            Toast.makeText(this, "El campo apellido puede llevar numeros",
+        Pattern apellidoRegex = Pattern.compile(
+                "^" +
+                        "(?=.*[a-z])" +         //al menos una letra minusucla
+                        "(?=.*[A-Z])" +         //al menos una letra mayuscula
+                        ".{4,}" +               //al menos 4 caracteres
+                        "$"
+        );
+
+        if (apellido.isEmpty()) {
+            Toast.makeText(this, "El campo de apellido esta vacio",
                     Toast.LENGTH_SHORT).show();
-
             return false;
-        } catch (Exception e) {
-            if (apellido.isEmpty()){
-                Toast.makeText(this, "El campo de apellido esta vacio",
-                        Toast.LENGTH_SHORT).show();
-                return false;
-            }
-
-            return true;
+        }else if (!apellidoRegex.matcher(apellido).matches()){
+            Toast.makeText(this, "El campo apellido no puede aceptar numeros, ni " +
+                            "caracteres especiales",
+                    Toast.LENGTH_SHORT).show();
+            return false;
         }
+
+        return true;
     }
 
     /**
