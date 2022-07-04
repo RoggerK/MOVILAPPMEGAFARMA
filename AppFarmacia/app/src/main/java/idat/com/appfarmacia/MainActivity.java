@@ -44,22 +44,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ValidarUsuario() {
+
         EditText etUsuario = findViewById(R.id.lblUsu);
         EditText etClave = findViewById(R.id.lblContra);
 
         String textUsuario = etUsuario.getText().toString();
         String textClave = etClave.getText().toString();
 
-        if(!textUsuario.equals("") || !textClave.equals("")){
-            Intent intent = new Intent(this,  PrincipalActivity.class);
-            intent.putExtra("usuario",textUsuario);
-
-
-            startActivity(intent);
+        if(textUsuario.isEmpty()) {
+            Toast.makeText(this, "El campor usuario esta vacio",
+                    Toast.LENGTH_SHORT).show();
+        } else if(textClave.isEmpty()) {
+            Toast.makeText(this, "El campo contraseña esta vacio",
+                    Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this,"Debe llenar los campos",Toast.LENGTH_LONG).show();
-        }
-    }
+            if(textUsuario.equals("caycho") && textClave.equals("123456")){
+                Intent intent = new Intent(this,  PrincipalActivity.class);
+                intent.putExtra("usuario",textUsuario);
 
+                startActivity(intent);
+            } else if(textUsuario.equals("rogger") && textClave.equals("789456")){
+                Intent intent = new Intent(this,  PrincipalActivity.class);
+                intent.putExtra("usuario",textUsuario);
+
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "El usuario no esta registrado",
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+
+    }
 
 }
