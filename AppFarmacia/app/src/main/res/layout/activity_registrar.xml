@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrarActivity"
     android:background="@color/fondo_registrar"
     android:orientation="vertical"
-    >
+    tools:context=".RegistrarActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@color/botones"
         android:orientation="vertical">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="25dp"
-            android:text="@string/registrarse_login"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/botones"
+            android:orientation="vertical">
 
-    <LinearLayout
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="25dp"
+                android:text="@string/registrarse_login"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -34,7 +38,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:background="@color/white"
@@ -51,7 +55,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="10dp"
@@ -65,36 +69,17 @@
 
                     android:id="@+id/txt_Apellido"
                     android:layout_width="match_parent"
-                    android:layout_height="58dp" />
+                    android:layout_height="match_parent" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="112dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="10dp"
-                android:hint="@string/codigo_postal"
-                android:paddingTop="10dp"
-                app:endIconMode="clear_text"
-                app:hintTextColor="@color/white">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:id="@+id/txt_CodPais"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="199dp"
-                android:layout_height="76dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="10dp"
@@ -110,34 +95,15 @@
 
                     android:id="@+id/txt_Celular"
                     android:layout_width="match_parent"
-                    android:layout_height="64dp" />
+                    android:layout_height="match_parent" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="112dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="10dp"
-                android:hint="@string/documento"
-                android:paddingTop="10dp"
-                app:endIconMode="clear_text"
-                app:hintTextColor="@color/white">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:id="@+id/txt_TipDoc"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -157,64 +123,68 @@
 
                     android:id="@+id/txt_Dni"
                     android:layout_width="match_parent"
-                    android:layout_height="64dp" />
+                    android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="247dp"
-            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="10dp"
-                android:hint="@string/correo"
+
                 android:paddingTop="10dp"
                 app:endIconMode="clear_text"
                 app:hintTextColor="@color/white"
-                app:startIconDrawable="@drawable/correo">
+                app:startIconDrawable="@drawable/correo"
+                android:hint="@string/correo"
+                app:helperText="@string/ht_correo"
+                app:helperTextTextColor="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_Correo"
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:hint="@string/ht_correo" />
+                    android:layout_height="match_parent"
+
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
-                android:hint="@string/nacimiento"
+                app:helperTextTextColor="@color/white"
+                app:helperText="@string/ht_fc_nacimiento"
                 android:paddingTop="10dp"
                 app:endIconMode="clear_text"
                 app:hintTextColor="@color/white"
                 app:startIconDrawable="@drawable/fecha"
-
+                android:hint="@string/nacimiento"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_Fecha"
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:hint="@string/ht_fc_nacimiento"
+                    android:layout_height="match_parent"
+
                     android:maxLength="10" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
-                android:hint="@string/Contrasena"
+               app:helperText="@string/ht_contrasenia"
+                app:helperTextTextColor="@color/white"
                 android:paddingTop="10dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="8"
@@ -225,29 +195,24 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_Contrasenia"
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:hint="@string/ht_contrasenia"
+                    android:layout_height="match_parent"
+                    android:hint="@string/Contrasena"
                     android:inputType="textPassword"
                     android:maxLength="10" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
-
+     </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/bt_Cancelar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
                 android:backgroundTint="@color/rojo_cancelar"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
@@ -258,10 +223,9 @@
             <Button
                 android:id="@+id/bt_Aceptar"
                 style="@style/Widget.MaterialComponents.Button.Icon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
                 android:backgroundTint="@color/verde_aceptar"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
@@ -269,5 +233,5 @@
                 android:textSize="15dp"
                 app:icon="@drawable/yes" />
         </LinearLayout>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
