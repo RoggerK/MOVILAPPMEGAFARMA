@@ -101,7 +101,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 "^" +
                         "(?=.*[a-z])" +         //al menos una letra minusucla
                         "(?=.*[A-Z])" +         //al menos una letra mayuscula
-                        ".{4,}" +               //al menos 4 caracteres
+                        ".{3,}" +               //al menos 3 caracteres
                         "$"
         );
 
@@ -124,7 +124,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 "^" +
                         "(?=.*[a-z])" +         //al menos una letra minusucla
                         "(?=.*[A-Z])" +         //al menos una letra mayuscula
-                        ".{4,}" +               //al menos 4 caracteres
+                        ".{3,}" +               //al menos 3 caracteres
                         "$"
         );
 
