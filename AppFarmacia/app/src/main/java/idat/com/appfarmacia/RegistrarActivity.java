@@ -299,7 +299,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 }
 
                 edad = Period.between(LocalDate.of(fc_anio, fc_mes, fc_dia), LocalDate.now());
-                if (edad.getYears() <= 18){
+                if (edad.getYears() < 18){
                     Toast.makeText(this, "Debes ser mayor de edad para crear un usuario",
                             Toast.LENGTH_SHORT).show();
                     return false;
