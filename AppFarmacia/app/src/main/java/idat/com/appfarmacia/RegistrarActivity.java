@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.regex.Pattern;
 
 public class RegistrarActivity extends AppCompatActivity {
@@ -101,12 +103,16 @@ public class RegistrarActivity extends AppCompatActivity {
                 "^" +
                         "(?=.*[a-z])" +         //al menos una letra minusucla
                         "(?=.*[A-Z])" +         //al menos una letra mayuscula
-                        ".{4,}" +               //al menos 4 caracteres
+                        ".{3,}" +               //al menos 3 caracteres
                         "$"
         );
 
         if (nombre.isEmpty()) {
             Toast.makeText(this, "El campo de nombre esta vacio",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        }else if (nombre.length() <= 2){
+            Toast.makeText(this, "El campo nombre no puede tener menos de 2 caracteres",
                     Toast.LENGTH_SHORT).show();
             return false;
         }else if (!nombreRegex.matcher(nombre).matches()){
@@ -124,12 +130,16 @@ public class RegistrarActivity extends AppCompatActivity {
                 "^" +
                         "(?=.*[a-z])" +         //al menos una letra minusucla
                         "(?=.*[A-Z])" +         //al menos una letra mayuscula
-                        ".{4,}" +               //al menos 4 caracteres
+                        ".{3,}" +               //al menos 3 caracteres
                         "$"
         );
 
         if (apellido.isEmpty()) {
             Toast.makeText(this, "El campo de apellido esta vacio",
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        }else if (apellido.length() <= 2){
+            Toast.makeText(this, "El campo apellido no puede tener menos de 2 caracteres",
                     Toast.LENGTH_SHORT).show();
             return false;
         }else if (!apellidoRegex.matcher(apellido).matches()){
@@ -244,26 +254,60 @@ public class RegistrarActivity extends AppCompatActivity {
     private boolean validarFecha(String fecha) {
         try {
             String[] fc_nacimiento = fecha.split("[-/]+", 3);
+            byte fc_dia = 0;
+            byte fc_mes = 0;
+            short fc_anio = 0;
+            Period edad;
 
-            if(!fecha.equals("")){
+            if(!fecha.isEmpty()){
                 for (int i = 0; i < fc_nacimiento.length; i++) {
                     Integer.parseInt(fc_nacimiento[i]);
                 }
 
-                if(!(fc_nacimiento[0].length() == 4)){
-                    Toast.makeText(this, "Longitud de año incorrecto",
-                                    Toast.LENGTH_SHORT).show();
-                    return false;
-                }
-
-                if(!(fc_nacimiento[1].length() >= 1 && fc_nacimiento[1].length() <= 2)
-                        || !(fc_nacimiento[2].length() >= 1 && fc_nacimiento[2].length() <= 2)){
+                if(!(fc_nacimiento[0].length() >= 1 && fc_nacimiento[0].length() <= 2)
+                        || !(fc_nacimiento[1].length() >= 1 && fc_nacimiento[1].length() <= 2)){
                     Toast.makeText(this, "Longitud de mes o dia incorrecto",
                                     Toast.LENGTH_SHORT).show();
+                    return false;
+                } else {
+                    fc_dia = Byte.parseByte(fc_nacimiento[0]);
+                    fc_mes = Byte.parseByte(fc_nacimiento[1]);
+                    if(!(fc_dia >= 1 && fc_dia <= 31)){
+                        Toast.makeText(this, "Los dias solo es del 1 al 31, 30 o 28",
+                                Toast.LENGTH_SHORT).show();
+                        return false;
+                    }
+
+                    if(!(fc_mes >= 1 && fc_mes <= 12)){
+                        Toast.makeText(this, "Los meses solo es del 1 al 12",
+                                Toast.LENGTH_SHORT).show();
+                        return false;
+                    }
+                }
+
+                if(!(fc_nacimiento[2].length() == 4)){
+                    Toast.makeText(this, "Longitud de año incorrecto",
+                            Toast.LENGTH_SHORT).show();
+                    return false;
+                } else {
+                    fc_anio = Short.parseShort(fc_nacimiento[2]);
+                    if(fc_anio <=1900){
+                        Toast.makeText(this, "El año indica que la edad esta fuera del promedio" +
+                                        " que es de 122 años",
+                                Toast.LENGTH_SHORT).show();
+                        return false;
+                    }
+                }
+
+                edad = Period.between(LocalDate.of(fc_anio, fc_mes, fc_dia), LocalDate.now());
+                if (edad.getYears() < 18){
+                    Toast.makeText(this, "Debes ser mayor de edad para crear un usuario",
+                            Toast.LENGTH_SHORT).show();
                     return false;
                 }
 
                 return true;
+
             } else {
                 Toast.makeText(this, "La fecha de nacimiento esta vacia",
                                 Toast.LENGTH_SHORT).show();
@@ -274,11 +318,12 @@ public class RegistrarActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
             return false;
         } catch (ArrayIndexOutOfBoundsException e){
-            Toast.makeText(this, "La fecha debe esta compuesta por año-mes-dia",
+            Toast.makeText(this, "La fecha debe esta compuesta por dia/mes/año",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
     }
+
     /**
      * validarContrasenia(String contrasenia):
      *
