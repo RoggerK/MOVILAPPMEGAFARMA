@@ -18,4 +18,7 @@
     <color name="verde_aceptar">#00BC13</color>
     <color name="azul_principal">#8AB9DF</color>
     <color name="blanco_principal">#fff</color>
+
+    <color name="azul_solicitud">#8AB9DF</color>
+    <color name="azul_aceptar">#FF3700B3</color>
 </resources>
