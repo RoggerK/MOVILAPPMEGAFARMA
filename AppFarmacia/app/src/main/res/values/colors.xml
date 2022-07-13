@@ -21,4 +21,5 @@
 
     <color name="azul_solicitud">#8AB9DF</color>
     <color name="azul_aceptar">#FF3700B3</color>
+    <color name="fondo_detalle">#8AB9DF</color>
 </resources>
