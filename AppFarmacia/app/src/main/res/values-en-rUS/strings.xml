@@ -28,4 +28,7 @@
     <string name="ht_fc_nacimiento">yyyy-mm-dd</string>
     <string name="ht_contrasenia">roG1@123</string>
 
+    <!--   Solicitud activity   -->
+    <string name="mensaje_solicitud">Thanks you for your purchase request!</string>
+
 </resources>
