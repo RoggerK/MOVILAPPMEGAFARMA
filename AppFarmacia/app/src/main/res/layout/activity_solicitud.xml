@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
-        android:text="!Gracias por su solicitud de producto¡"
+        android:text="@string/mensaje_solicitud"
         android:textColor="@color/purple_700"
         android:textAlignment="center"
         android:textSize="30sp" />

@@ -30,4 +30,7 @@
     <!--  Principal activity   -->
     <string name="salir" translatable="false">Salir</string>
     <string name="producto" translatable="false">Productos</string>
+
+    <!--   Solicitud activity   -->
+    <string name="mensaje_solicitud">¡Gracias por su solicitud de compra!</string>
 </resources>
