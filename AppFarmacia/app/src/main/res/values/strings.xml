@@ -33,4 +33,9 @@
 
     <!--   Solicitud activity   -->
     <string name="mensaje_solicitud">¡Gracias por su solicitud de compra!</string>
+
+    <!--   Detalle activity   -->
+    <string name="siguiente">Siguiente</string>
+    <string name="regresar">Regresar</string>
+
 </resources>

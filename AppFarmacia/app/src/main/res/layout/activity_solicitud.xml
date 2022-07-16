@@ -51,7 +51,7 @@
         android:layout_marginLeft="50sp"
         android:layout_marginRight="50sp"
         android:backgroundTint="@color/verde_aceptar"
-        android:text="Aceptar"
+        android:text="@string/aceptar"
         android:textSize="20sp" />
 
 </LinearLayout>
