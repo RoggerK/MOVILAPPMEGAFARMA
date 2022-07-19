@@ -1,5 +1,6 @@
 package idat.com.appfarmacia;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -32,25 +35,41 @@ public class CustomAdapterSinLogeo extends RecyclerView.Adapter<CustomAdapterSin
         }
     }
 
+    private Context context;
     private List<Producto> listaProducto;
 
-    public CustomAdapterSinLogeo(List<Producto> listaProducto) {
+    public CustomAdapterSinLogeo(Context context, List<Producto> listaProducto) {
+        this.context = context;
         this.listaProducto = listaProducto;
     }
 
     @NonNull
     @Override
     public ViewHolderSinLogeo onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.template_card_sinlogear,
+                parent,false);
+        ViewHolderSinLogeo viewHoler = new ViewHolderSinLogeo(view);
+
+        return viewHoler;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderSinLogeo holder, int position) {
+        String nombreProducto = listaProducto.get(position).getNombre();
+        //agrego libreria Picasso
+        Picasso.with(context)
+                .load(listaProducto.get(position).getUrlImg())
+                .error(R.drawable.ic_launcher_foreground) //en caso que la url no sea válida muestro otra imagen
+                .into(holder.imagen);
 
+        holder.imagen.setContentDescription(nombreProducto);
+        holder.nombre.setText(nombreProducto);
+        holder.marca.setText(listaProducto.get(position).getMarca());
+        holder.precio.setText(listaProducto.get(position).getPrecio());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listaProducto.size();
     }
 }
