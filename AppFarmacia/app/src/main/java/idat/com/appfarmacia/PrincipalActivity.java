@@ -19,7 +19,7 @@ import idat.com.appfarmacia.model.Producto;
 public class PrincipalActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewProductoSin;
-    private CustomAdapterSinLogeo adaptadorProductoSin;
+    private CustomAdapterLogeo adaptadorProductoLog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class PrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
         Button btnSalir = findViewById(R.id.btnSalir);
+
         recyclerViewProductoSin = findViewById(R.id.recyclerLogear);
         recyclerViewProductoSin.setLayoutManager(new LinearLayoutManager(this));
 
@@ -38,8 +39,8 @@ public class PrincipalActivity extends AppCompatActivity {
             tvUsuario.setText(usuario);
         }
 
-        adaptadorProductoSin = new CustomAdapterSinLogeo(this, obtenerPaises());
-        recyclerViewProductoSin.setAdapter(adaptadorProductoSin);
+        adaptadorProductoLog = new CustomAdapterLogeo(this, obtenerPaises());
+        recyclerViewProductoSin.setAdapter(adaptadorProductoLog);
 
         btnSalir.setOnClickListener(new View.OnClickListener() {
             @Override
