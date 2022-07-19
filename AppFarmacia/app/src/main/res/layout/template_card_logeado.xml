@@ -14,6 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <!-- Media -->
@@ -28,6 +29,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -52,7 +54,6 @@
                         android:layout_marginRight="8dp"
                         android:text="MARCA:"
                         android:textAppearance="?attr/textAppearanceBodyMedium"
-                        android:textColor="?android:attr/textColorSecondary"
                         android:textSize="15dp" />
 
                     <TextView
@@ -61,7 +62,6 @@
                         android:layout_height="wrap_content"
                         android:text="NOMBRE_MARCA_DEL_PRODUCTO"
                         android:textAppearance="?attr/textAppearanceBodyMedium"
-                        android:textColor="?android:attr/textColorSecondary"
                         android:textSize="15dp" />
 
                 </LinearLayout>
@@ -78,8 +78,7 @@
                         android:text="PRECIO:"
                         android:layout_marginRight="8dp"
                         android:textSize="15dp"
-                        android:textAppearance="?attr/textAppearanceBodyMedium"
-                        android:textColor="?android:attr/textColorSecondary" />
+                        android:textAppearance="?attr/textAppearanceBodyMedium" />
 
                     <TextView
                         android:id="@+id/tvPrecioLog"
@@ -87,7 +86,6 @@
                         android:layout_height="wrap_content"
                         android:text="PRECIO_DE_PRODUCTO"
                         android:textAppearance="?attr/textAppearanceBodyMedium"
-                        android:textColor="?android:attr/textColorSecondary"
                         android:textSize="15dp" />
 
                 </LinearLayout>
@@ -99,6 +97,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_margin="8dp"
                 android:orientation="horizontal">
 
