@@ -33,9 +33,14 @@
 
     <!--   Solicitud activity   -->
     <string name="mensaje_solicitud">¡Gracias por su solicitud de compra!</string>
+    <string name="aceptar2">Aceptar</string>
 
     <!--   Detalle activity   -->
     <string name="siguiente">Siguiente</string>
     <string name="regresar">Regresar</string>
+    <string name="total">Total</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

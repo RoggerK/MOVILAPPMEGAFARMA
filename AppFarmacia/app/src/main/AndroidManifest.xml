@@ -20,7 +20,9 @@
             android:name=".PrincipalSinActivity"
             android:exported="false" />
         <activity
-            android:name=".DetalleCompraActivity"
+
+            android:name=".MainActivity"
+
             android:exported="false" />
         <activity
             android:name=".SolicitudActivity"
@@ -35,7 +37,7 @@
             android:name=".RegistrarActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DetalleCompraActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

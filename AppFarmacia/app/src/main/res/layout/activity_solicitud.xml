@@ -52,6 +52,7 @@
         android:layout_marginRight="50sp"
         android:backgroundTint="@color/verde_aceptar"
         android:text="@string/aceptar"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:theme="@style/Widget.Material3.Button"/>
 
 </LinearLayout>

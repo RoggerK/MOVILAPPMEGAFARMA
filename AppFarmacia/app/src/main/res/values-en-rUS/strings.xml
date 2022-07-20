@@ -30,9 +30,10 @@
 
     <!--   Solicitud activity   -->
     <string name="mensaje_solicitud">Thanks you for your purchase request!</string>
-
+    <string name="aceptar2">Accept</string>
     <!--   Detalle activity   -->
     <string name="siguiente">Next</string>
     <string name="regresar">Return</string>
+    <string name="total">Total</string>
 
 </resources>
