@@ -35,5 +35,7 @@
     <string name="siguiente">Next</string>
     <string name="regresar">Return</string>
     <string name="total">Total</string>
+    <string name="precio_unitario">Unit Price</string>
+    <string name="precio_neto">Price</string>
 
 </resources>

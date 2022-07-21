@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="PRECIO_UNITARIO:"
+                    android:text="@string/precio_neto"
                     android:textAppearance="?attr/textAppearanceBodyMedium"
                     android:textSize="15dp" />
 
@@ -58,7 +58,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PRECIO_PRODUCTO:"
+                    android:text="@string/precio_unitario"
                     android:layout_marginRight="8dp"
                     android:textSize="15dp"
                     android:textAppearance="?attr/textAppearanceBodyMedium" />

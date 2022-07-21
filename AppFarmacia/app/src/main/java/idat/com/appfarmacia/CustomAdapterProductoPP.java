@@ -25,16 +25,15 @@ public class CustomAdapterProductoPP extends RecyclerView.Adapter<CustomAdapterP
 
             nombre = (TextView) itemView.findViewById(R.id.tvNombrePro);
             precio = (TextView) itemView.findViewById(R.id.tvPrecioHere);
-            precio_unitario = (TextView) itemView.findViewById((R.id.tvPrecioUniHere));
+            precio_unitario = (TextView) itemView.findViewById(R.id.tvPrecioUniHere);
 
         }
     }
 
-    private Context context;
+
     private List<ProductoPyP> listaProductoPyP;
 
-    public CustomAdapterProductoPP(Context context, List<ProductoPyP> listaProductoPyP) {
-        this.context = context;
+    public CustomAdapterProductoPP( List<ProductoPyP> listaProductoPyP) {
         this.listaProductoPyP = listaProductoPyP;
     }
 
@@ -52,7 +51,7 @@ public class CustomAdapterProductoPP extends RecyclerView.Adapter<CustomAdapterP
         String nombreProductoPP = listaProductoPyP.get(position).getNombre();
 
         holder.nombre.setText(nombreProductoPP);
-        holder.precio.setText(listaProductoPyP.get(position).getPrecio();
+        holder.precio.setText(listaProductoPyP.get(position).getPrecio());
         holder.precio_unitario.setText(listaProductoPyP.get(position).getPrecio_unitario());
 
 

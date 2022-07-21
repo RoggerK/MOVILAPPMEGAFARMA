@@ -39,6 +39,8 @@
     <string name="siguiente">Siguiente</string>
     <string name="regresar">Regresar</string>
     <string name="total">Total</string>
+    <string name="precio_unitario">Precio Unitario</string>
+    <string name="precio_neto">Precio</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -21,9 +21,6 @@ public class PrincipalActivity extends AppCompatActivity {
     private RecyclerView recyclerViewProductoSin;
     private CustomAdapterLogeo adaptadorProductoLog;
 
-    private RecyclerView recyclerViewProductoPyP;
-    private CustomAdapterLogeo adaptadorProductoPyP;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
