@@ -25,15 +25,20 @@
 
     <!-- Mensaje ocultos -->
     <string name="ht_correo">example@example.com</string>
-    <string name="ht_fc_nacimiento">yyyy-mm-dd</string>
+    <string name="ht_fc_nacimiento">dd/mm/yyyy</string>
     <string name="ht_contrasenia">roG1@123</string>
 
     <!--   Solicitud activity   -->
     <string name="mensaje_solicitud">Thanks you for your purchase request!</string>
     <string name="aceptar2">Accept</string>
+    <string name="sol_mensaje_codigo">Your request code is:</string>
     <!--   Detalle activity   -->
     <string name="siguiente">Next</string>
     <string name="regresar">Return</string>
     <string name="total">Total</string>
 
+    <!-- Card -->
+    <string name="card_marca">TRADEMARK:</string>
+    <string name="card_precio">PRICE:</string>
+    <string name="card_agregar">ADD</string>
 </resources>

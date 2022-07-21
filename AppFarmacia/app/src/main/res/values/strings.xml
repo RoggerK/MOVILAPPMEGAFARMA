@@ -23,7 +23,7 @@
 
     <!-- Mensaje ocultos -->
     <string name="ht_correo">ejemplo@ejemplo.com</string>
-    <string name="ht_fc_nacimiento">aaaa-mm-dd</string>
+    <string name="ht_fc_nacimiento">dd/mm/aaaa</string>
     <string name="ht_contrasenia">roG1@123</string>
 
 
@@ -34,11 +34,16 @@
     <!--   Solicitud activity   -->
     <string name="mensaje_solicitud">¡Gracias por su solicitud de compra!</string>
     <string name="aceptar2">Aceptar</string>
-
+    <string name="sol_mensaje_codigo">Su código de solicitud es:</string>
     <!--   Detalle activity   -->
     <string name="siguiente">Siguiente</string>
     <string name="regresar">Regresar</string>
     <string name="total">Total</string>
+
+    <!-- Card -->
+    <string name="card_marca">MARCA:</string>
+    <string name="card_precio">PRECIO:</string>
+    <string name="card_agregar">AGREGAR</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
