@@ -40,7 +40,15 @@
     <string name="regresar">Regresar</string>
     <string name="total">Total</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- NO LOGUEADO BOT  NO TRADUCIDO -->
+    <string name="megafarma" translatable="false">Megafarma</string>
+    <string name="bot_iniciar" translatable="false">Iniciar Sesion</string>
+    <!-- LOGUEADO BOT -->
+    <string name="Perfil" translatable="false">Perfil</string>
+    <string name="Carrito" translatable="false">Carrito</string>
+    <string name="Cerrar_sesion" translatable="false">Cerrar Sesion</string>
+    <!--  DETALLE BOT   -->
+    <string name="atras" translatable="false">Atras</string>
+    <string name="Salir" translatable="false">Salir</string>
 
 </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_1"
+        android:enabled="true"
+        android:icon="@drawable/mf_transparente"
+        android:title="@string/megafarma"/>
+    <item
+        android:id="@+id/tv_usuario"
+        android:enabled="true"
+        android:tooltipText="@string/Perfil"
+        android:title="@string/Perfil"/>
+    <item
+        android:id="@+id/page_3"
+        android:enabled="true"
+        android:icon="@drawable/carrito"
+        android:title="@string/Carrito"/>
+    <item
+        android:id="@+id/page_4"
+        android:enabled="true"
+        android:icon="@drawable/cerrarsesion"
+        android:title="@string/Cerrar_sesion"/>
+</menu>
