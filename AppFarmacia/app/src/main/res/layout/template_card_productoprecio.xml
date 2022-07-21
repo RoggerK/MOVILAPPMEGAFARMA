@@ -40,7 +40,7 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/tvMarcaSin"
+                    android:id="@+id/tvPrecioHere"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="¡AQUÍ_VA_EL_PRECIO!"
@@ -64,7 +64,7 @@
                     android:textAppearance="?attr/textAppearanceBodyMedium" />
 
                 <TextView
-                    android:id="@+id/tvPrecioUni"
+                    android:id="@+id/tvPrecioUniHere"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AQUI_VA_PRECIOUNI"

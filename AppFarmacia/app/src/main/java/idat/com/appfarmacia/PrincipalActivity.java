@@ -21,6 +21,9 @@ public class PrincipalActivity extends AppCompatActivity {
     private RecyclerView recyclerViewProductoSin;
     private CustomAdapterLogeo adaptadorProductoLog;
 
+    private RecyclerView recyclerViewProductoPyP;
+    private CustomAdapterLogeo adaptadorProductoPyP;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
         recyclerViewProductoSin = findViewById(R.id.recyclerLogear);
         recyclerViewProductoSin.setLayoutManager(new LinearLayoutManager(this));
+
 
         Bundle parametros = this.getIntent().getExtras();
         if(parametros != null) {

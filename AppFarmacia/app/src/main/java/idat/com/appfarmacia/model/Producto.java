@@ -5,6 +5,7 @@ public class Producto {
     String nombre;
     String marca;
     String precio;
+    
 
     public Producto() {
     }
@@ -47,4 +48,5 @@ public class Producto {
     public void setPrecio(String precio) {
         this.precio = precio;
     }
+
 }
