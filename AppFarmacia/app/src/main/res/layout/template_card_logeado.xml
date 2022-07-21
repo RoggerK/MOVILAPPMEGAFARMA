@@ -52,7 +52,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="8dp"
-                        android:text="MARCA:"
+                        android:text="@string/card_marca"
                         android:textAppearance="?attr/textAppearanceBodyMedium"
                         android:textSize="15dp" />
 
@@ -75,7 +75,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PRECIO:"
+                        android:text="@string/card_precio"
                         android:layout_marginRight="8dp"
                         android:textSize="15dp"
                         android:textAppearance="?attr/textAppearanceBodyMedium" />
@@ -106,7 +106,7 @@
                     android:theme="@style/Widget.Material3.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="AGREGAR"
+                    android:text="@string/card_agregar"
                     />
             </LinearLayout>
 

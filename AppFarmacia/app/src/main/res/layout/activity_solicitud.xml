@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30sp"
-        android:text="Su código de solicitud es:"
+        android:text="@string/sol_mensaje_codigo"
         android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="20sp" />
