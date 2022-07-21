@@ -47,13 +47,13 @@ public class DetalleCompraActivity extends AppCompatActivity {
 
     public List<ProductoPyP> obtenerProductos(){
         List<ProductoPyP> productoPyPList = new ArrayList<>();
-        productoPyPList.add(new ProductoPyP("Paracetamol 1000gramos caja","50.50","10.10"));
-        productoPyPList.add(new ProductoPyP("Azitromicina 1000gramos caja","50.50","10.10"));
-        productoPyPList.add(new ProductoPyP("Penicilina 1000gramos caja","50.50","10.10"));
-        productoPyPList.add(new ProductoPyP("Panadol 1000gramos caja","50.50","10.10"));
-        productoPyPList.add(new ProductoPyP("Anterogerminlina 1000gramos caja","50.50","10.10"));
-        productoPyPList.add(new ProductoPyP("Cartuchera 1000gramos caja","50.50","10.10"));
-        productoPyPList.add(new ProductoPyP("Plumon 1000gramos caja","50.50","10.10"));
+        productoPyPList.add(new ProductoPyP("Paracetamol 1000 gr caja","50.50","10.10"));
+        productoPyPList.add(new ProductoPyP("Azitromicina 1000 gr caja","50.50","10.10"));
+        productoPyPList.add(new ProductoPyP("Penicilina 1000 gr caja","50.50","10.10"));
+        productoPyPList.add(new ProductoPyP("Panadol 1000 gr caja","50.50","10.10"));
+        productoPyPList.add(new ProductoPyP("Anterogerminlina 1000 gr caja","50.50","10.10"));
+        productoPyPList.add(new ProductoPyP("Cartuchera 1000 gr caja","50.50","10.10"));
+        productoPyPList.add(new ProductoPyP("Plumon 1000 gr caja","50.50","10.10"));
 
         return productoPyPList;
     }
