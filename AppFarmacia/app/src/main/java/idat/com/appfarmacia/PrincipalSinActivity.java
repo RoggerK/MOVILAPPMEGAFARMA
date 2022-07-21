@@ -24,11 +24,11 @@ public class PrincipalSinActivity extends AppCompatActivity {
         recyclerViewProductoCon = findViewById(R.id.recyclerSinLogear);
         recyclerViewProductoCon.setLayoutManager(new LinearLayoutManager(this));
 
-        adaptadorProductoSin = new CustomAdapterSinLogeo(this, obtenerPaises());
+        adaptadorProductoSin = new CustomAdapterSinLogeo(this, obtenerProducto());
         recyclerViewProductoCon.setAdapter(adaptadorProductoSin);
     }
 
-    public List<Producto> obtenerPaises(){
+    public List<Producto> obtenerProducto(){
         List<Producto> productos = new ArrayList<>();
 
         productos.add(new Producto("https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/421011X.jpg","Enterogermina Suspensión Oral","SANOFI","12.00"));

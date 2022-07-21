@@ -39,7 +39,7 @@ public class PrincipalActivity extends AppCompatActivity {
             tvUsuario.setText(usuario);
         }
 
-        adaptadorProductoLog = new CustomAdapterLogeo(this, obtenerPaises());
+        adaptadorProductoLog = new CustomAdapterLogeo(this, obtenerProducto());
         recyclerViewProductoSin.setAdapter(adaptadorProductoLog);
 
         btnSalir.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +51,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
     }
 
-    public List<Producto> obtenerPaises(){
+    public List<Producto> obtenerProducto(){
         List<Producto> productos = new ArrayList<>();
 
         productos.add(new Producto("https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/421011X.jpg","Enterogermina Suspensión Oral","SANOFI","12.00"));
