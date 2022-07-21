@@ -35,9 +35,10 @@
     <!--   Detalle activity   -->
     <string name="siguiente">Next</string>
     <string name="regresar">Return</string>
-    <string name="total">Total</string>
+    <string name="cantidad_pro">Quantity:</string>
     <string name="precio_unitario">Unit Price</string>
-    <string name="precio_neto">Price</string>
+    <string name="importe_pro">Amount:</string>
+    <string name="total">Total</string>
 
     <!-- Card -->
     <string name="card_marca">TRADEMARK:</string>

@@ -17,15 +17,17 @@ public class CustomAdapterProductoPP extends RecyclerView.Adapter<CustomAdapterP
 
     public static class ViewHolderProductoPP extends RecyclerView.ViewHolder {
         private TextView nombre;
-        private TextView precio;
-        private TextView precio_unitario;
+        private TextView cantidad;
+        private TextView precio_unidad;
+        private TextView importe;
 
         public ViewHolderProductoPP(@NonNull View itemView) {
             super(itemView);
 
             nombre = (TextView) itemView.findViewById(R.id.tvNombrePro);
-            precio = (TextView) itemView.findViewById(R.id.tvPrecioHere);
-            precio_unitario = (TextView) itemView.findViewById(R.id.tvPrecioUniHere);
+            cantidad = (TextView)  itemView.findViewById(R.id.tvCantidadPro);
+            precio_unidad = (TextView) itemView.findViewById(R.id.tvPrecioUni);
+            importe = (TextView) itemView.findViewById(R.id.tvPrecioImp);
 
         }
     }
@@ -51,9 +53,9 @@ public class CustomAdapterProductoPP extends RecyclerView.Adapter<CustomAdapterP
         String nombreProductoPP = listaProductoPyP.get(position).getNombre();
 
         holder.nombre.setText(nombreProductoPP);
-        holder.precio.setText(listaProductoPyP.get(position).getPrecio());
-        holder.precio_unitario.setText(listaProductoPyP.get(position).getPrecio_unitario());
-
+        holder.cantidad.setText((listaProductoPyP.get(position).getCantidad()).toString());
+        holder.precio_unidad.setText((listaProductoPyP.get(position).getPrecio_unitario()).toString());
+        holder.importe.setText((listaProductoPyP.get(position).getImporte()).toString());
 
     }
 

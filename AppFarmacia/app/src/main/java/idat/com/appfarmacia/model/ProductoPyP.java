@@ -2,41 +2,50 @@ package idat.com.appfarmacia.model;
 
 public class ProductoPyP {
     String nombre;
-    String precio;
-    String precio_unitario;
+    Integer cantidad;
+    Double precio_unitario;
+    Double importe;
 
     public ProductoPyP() {
 
     }
 
-    public ProductoPyP(String nombre, String precio, String precio_unitario) {
+    public ProductoPyP(String nombre, Integer cantidad, Double precio_unitario, Double importe) {
         this.nombre = nombre;
-        this.precio = precio;
+        this.cantidad = cantidad;
         this.precio_unitario = precio_unitario;
+        this.importe = importe;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getPrecio() {
-        return precio;
-    }
-
-    public String getPrecio_unitario() {
-        return precio_unitario;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setPrecio(String precio) {
-        this.precio = precio;
+    public Integer getCantidad() {
+        return cantidad;
     }
 
-    public void setPrecio_unitario(String precio_unitario) {
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public Double getPrecio_unitario() {
+        return precio_unitario;
+    }
+
+    public void setPrecio_unitario(Double precio_unitario) {
         this.precio_unitario = precio_unitario;
     }
 
+    public Double getImporte() {
+        return importe;
+    }
+
+    public void setImporte(Double importe) {
+        this.importe = importe;
+    }
 }

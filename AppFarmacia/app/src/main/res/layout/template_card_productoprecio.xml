@@ -28,6 +28,30 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cantidad_pro"
+                    android:layout_marginRight="8dp"
+                    android:textSize="15dp"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <TextView
+                    android:id="@+id/tvCantidadPro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AQUI_VA_CANTIDAD"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
@@ -35,12 +59,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="@string/precio_neto"
+                    android:text="@string/precio_unitario"
                     android:textAppearance="?attr/textAppearanceBodyMedium"
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/tvPrecioHere"
+                    android:id="@+id/tvPrecioUni"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="¡AQUÍ_VA_EL_PRECIO!"
@@ -58,13 +82,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/precio_unitario"
+                    android:text="@string/importe_pro"
                     android:layout_marginRight="8dp"
                     android:textSize="15dp"
                     android:textAppearance="?attr/textAppearanceBodyMedium" />
 
                 <TextView
-                    android:id="@+id/tvPrecioUniHere"
+                    android:id="@+id/tvPrecioImp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AQUI_VA_PRECIOUNI"

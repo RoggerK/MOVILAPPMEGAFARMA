@@ -7,10 +7,14 @@
         <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_detalle_compra.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_main.xml" value="0.15052083333333333" />
         <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_principal.xml" value="0.2" />
+        <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_principal_sin.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_producto.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_registrar.xml" value="0.22135416666666666" />
         <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_solicitud.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/fragment_details.xml" value="0.25" />
         <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/lista_correo.xml" value="0.2" />
+        <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/template_card_logeado.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidClases/GIT/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/template_card_sinlogear.xml" value="0.25416666666666665" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1525" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/candado.xml" value="0.1525" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/AppFarmacia/app/src/main/res/drawable/celar.xml" value="0.1525" />
@@ -34,12 +38,14 @@
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_main.xml" value="0.16770833333333332" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_principal.xml" value="0.33" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_principal_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_principal_sin.xml" value="0.33" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_producto.xml" value="0.16770833333333332" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_registrar.xml" value="0.22" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_solicitud.xml" value="0.16770833333333332" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/fragment_details.xml" value="0.15416666666666667" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/lista_correo.xml" value="0.16770833333333332" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/template_card_logeado.xml" value="0.3492723492723493" />
+        <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/template_card_productoprecio.xml" value="0.33" />
         <entry key="..\:/IDAT/CICLO-5/Desarrollo_de_Aplicaciones_Moviles_1/POYECMOVILFARMACIA/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/template_card_sinlogear.xml" value="0.3652173913043478" />
         <entry key="..\:/IDAT_CICLO 5/VIERNES - DESARROLLO DE APPS  MOV. 1/AppFarmacia - MEGAFARMA - AndroidStudio/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2115" />
         <entry key="..\:/IDAT_CICLO 5/VIERNES - DESARROLLO DE APPS  MOV. 1/AppFarmacia - MEGAFARMA - AndroidStudio/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/drawable/degradado.xml" value="0.1945" />
@@ -51,15 +57,8 @@
         <entry key="..\:/IDAT_CICLO 5/VIERNES - DESARROLLO DE APPS  MOV. 1/AppFarmacia - MEGAFARMA - AndroidStudio/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_registrar.xml" value="0.18" />
         <entry key="..\:/IDAT_CICLO 5/VIERNES - DESARROLLO DE APPS  MOV. 1/AppFarmacia - MEGAFARMA - AndroidStudio/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/list_item.xml" value="0.203125" />
         <entry key="..\:/IDAT_CICLO 5/VIERNES - DESARROLLO DE APPS  MOV. 1/AppFarmacia - MEGAFARMA - AndroidStudio/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/lista_correo.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/drawable/medicina.xml" value="0.124" />
-        <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_detalle_compra.xml" value="0.2" />
         <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_principal.xml" value="0.2" />
         <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/activity_registrar.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/fragment_details.xml" value="0.5282669138090825" />
-        <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/template_card_logeado.xml" value="0.264" />
-        <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/template_card_productoprecio.xml" value="0.2" />
-        <entry key="..\:/Users/Brian/OneDrive/Documentos/Mobiles/MegaFarma/MOVILAPPMEGAFARMA/AppFarmacia/app/src/main/res/layout/template_card_sinlogear.xml" value="0.264" />
       </map>
     </option>
   </component>
