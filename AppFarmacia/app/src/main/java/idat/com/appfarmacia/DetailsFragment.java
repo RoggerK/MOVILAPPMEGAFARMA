@@ -24,7 +24,7 @@ public class DetailsFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_details, container, false);
         abrirPrincipalLog();
-        abrirLogin();
+        cerrarSesion();
         return view;
     }
 
@@ -41,13 +41,15 @@ public class DetailsFragment extends Fragment {
 
     }
 
-    private void abrirLogin(){
+    private void cerrarSesion(){
         ImageView btnSalir = view.findViewById(R.id.btn_CerrarSesion);
 
         btnSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (AppWale.context, MainActivity.class);
+                Intent intent = new Intent (AppWale.context, PrincipalSinActivity.class);
+                Toast.makeText(AppWale.context, "Se cerro Sesion",
+                        Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });

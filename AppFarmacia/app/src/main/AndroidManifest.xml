@@ -18,7 +18,7 @@
         android:theme="@style/Theme.AppFarmacia"
         tools:targetApi="31" >
         <activity
-            android:name=".PrincipalSinActivity"
+            android:name=".DetalleCompraActivity"
             android:exported="false" />
         <activity
 
@@ -38,7 +38,7 @@
             android:name=".RegistrarActivity"
             android:exported="false" />
         <activity
-            android:name=".DetalleCompraActivity"
+            android:name=".PrincipalSinActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

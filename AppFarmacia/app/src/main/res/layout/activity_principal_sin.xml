@@ -9,6 +9,12 @@
     tools:context=".PrincipalActivity"
     android:background="@color/azul_principal">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="idat.com.appfarmacia.NoLogueadoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

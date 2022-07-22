@@ -4,44 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".LogueadoFragment"
-    android:outlineAmbientShadowColor="@color/azul_aceptar">
+    android:outlineAmbientShadowColor="@color/azul_aceptar"
+    tools:context=".LogueadoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:background="@color/botones"
-        android:padding="5dp"
-        >
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <ImageView
-
             android:layout_width="28dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/mf_transparente" />
+
         <ImageView
-            android:id="@+id/tv_usuario"
+            android:id="@+id/btn_PrincipalLog_VerDetalle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/carrito"
-            />
+            android:src="@drawable/carrito" />
+
         <ImageView
-            android:id="@+id/btnCarrito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/person"
+            android:src="@drawable/person" />
 
-            />
         <ImageView
-            android:id="@+id/btnSalir"
+            android:id="@+id/btn_PrincipalLog_CerrarSesion"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/cerrarsesion"
-            />
+            android:src="@drawable/cerrarsesion" />
     </LinearLayout>
 </FrameLayout>

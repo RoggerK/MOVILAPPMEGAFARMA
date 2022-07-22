@@ -22,7 +22,7 @@
             android:src="@drawable/mf_transparente" />
 
         <ImageView
-            android:id="@+id/tv_usuario"
+            android:id="@+id/btn_PrincipalSin_Iniciar_Sesion"
             android:layout_width="19dp"
             android:layout_height="43dp"
             android:layout_weight="1"
