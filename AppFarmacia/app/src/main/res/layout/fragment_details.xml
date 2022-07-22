@@ -24,14 +24,14 @@
                 android:src="@drawable/mf_transparente" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/btn_Regresar_Principal"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:src="@drawable/back" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/btn_CerrarSesion"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
