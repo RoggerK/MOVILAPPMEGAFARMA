@@ -26,29 +26,11 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        Button btnSalir = findViewById(R.id.btnSalir);
-
         recyclerViewProductoSin = findViewById(R.id.recyclerLogear);
         recyclerViewProductoSin.setLayoutManager(new LinearLayoutManager(this));
 
-
-        Bundle parametros = this.getIntent().getExtras();
-        if(parametros != null) {
-            String usuario = parametros.getString("usuario");
-
-            TextView tvUsuario = findViewById(R.id.tv_usuario);
-            tvUsuario.setText(usuario);
-        }
-
         adaptadorProductoLog = new CustomAdapterLogeo(this, obtenerProducto());
         recyclerViewProductoSin.setAdapter(adaptadorProductoLog);
-
-        btnSalir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cerrarSesion();
-            }
-        });
 
     }
 
@@ -61,13 +43,5 @@ public class PrincipalActivity extends AppCompatActivity {
         productos.add(new Producto("https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/108024X.jpg","Panadol 160mg/5ml Jarabe","GLAXO SMITHKLINE OTC","10.00"));
 
         return productos;
-    }
-
-    private void cerrarSesion(){
-        Intent intent = new Intent (this, MainActivity.class);
-        Toast.makeText(this, "Se cerro Sesion",
-                Toast.LENGTH_SHORT).show();
-
-        startActivity(intent);
     }
 }

@@ -60,13 +60,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if(textUsuario.equals("caycho") && textClave.equals("123456")){
                 Intent intent = new Intent(this,  PrincipalActivity.class);
-                intent.putExtra("usuario",textUsuario);
-
                 startActivity(intent);
             } else if(textUsuario.equals("rogger") && textClave.equals("789456")){
                 Intent intent = new Intent(this,  PrincipalActivity.class);
-                intent.putExtra("usuario",textUsuario);
-
                 startActivity(intent);
             } else {
                 Toast.makeText(this, "El usuario no esta registrado",
