@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,6 +31,7 @@
                 android:textColor="@color/white"
                 android:textSize="25dp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,6 +45,7 @@
                 android:layout_marginRight="25dp"
                 android:background="@color/white"
                 android:hint="@string/nombre"
+                app:endIconMode="clear_text"
                 app:startIconDrawable="@drawable/person">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -70,6 +73,7 @@
                     android:layout_height="match_parent" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,8 +89,8 @@
                 android:paddingTop="10dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="9"
-                app:endIconMode="clear_text"
                 app:counterTextColor="@color/white"
+                app:endIconMode="clear_text"
                 app:startIconDrawable="@drawable/celar">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -98,6 +102,7 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,8 +118,8 @@
                 android:paddingTop="10dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="8"
-                app:endIconMode="clear_text"
                 app:counterTextColor="@color/white"
+                app:endIconMode="clear_text"
                 app:startIconDrawable="@drawable/documento">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -124,6 +129,7 @@
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -136,13 +142,13 @@
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="10dp"
 
+                android:hint="@string/correo"
                 android:paddingTop="10dp"
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/white"
-                app:startIconDrawable="@drawable/correo"
-                android:hint="@string/correo"
                 app:helperText="@string/ht_correo"
-                app:helperTextTextColor="@color/white">
+                app:helperTextTextColor="@color/white"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/correo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_Correo"
@@ -158,14 +164,13 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
-                app:helperTextTextColor="@color/white"
-                app:helperText="@string/ht_fc_nacimiento"
-                android:paddingTop="10dp"
-                app:endIconMode="clear_text"
-                app:counterTextColor="@color/white"
-                app:startIconDrawable="@drawable/fecha"
                 android:hint="@string/nacimiento"
-                >
+                android:paddingTop="10dp"
+                app:counterTextColor="@color/white"
+                app:endIconMode="clear_text"
+                app:helperText="@string/ht_fc_nacimiento"
+                app:helperTextTextColor="@color/white"
+                app:startIconDrawable="@drawable/fecha">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_Fecha"
@@ -181,13 +186,13 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
-               app:helperText="@string/ht_contrasenia"
-                app:helperTextTextColor="@color/white"
                 android:paddingTop="10dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="8"
-                app:endIconMode="password_toggle"
                 app:counterTextColor="@color/white"
+                app:endIconMode="password_toggle"
+                app:helperText="@string/ht_contrasenia"
+                app:helperTextTextColor="@color/white"
                 app:startIconDrawable="@drawable/candado">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -199,13 +204,15 @@
                     android:maxLength="10" />
 
             </com.google.android.material.textfield.TextInputLayout>
-     </LinearLayout>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="20dp"
             android:layout_marginBottom="20dp"
-            android:orientation="vertical"
-            android:layout_margin="20dp">
+            android:orientation="vertical">
+
             <Button
                 android:id="@+id/bt_Aceptar"
                 style="@style/Widget.Material3.Button.ElevatedButton"
@@ -216,20 +223,21 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
                 android:text="@string/aceptar"
-                android:textSize="15dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
             <Button
                 android:id="@+id/bt_Cancelar"
+                style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:backgroundTint="@color/rojo_cancelar"
                 android:paddingTop="8dp"
-                style="@style/Widget.Material3.Button.ElevatedButton"
                 android:paddingBottom="8dp"
                 android:text="@string/cancelar"
-                android:textSize="15dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="15dp" />
 
 
         </LinearLayout>

@@ -58,8 +58,11 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "El campo contraseña esta vacio",
                     Toast.LENGTH_SHORT).show();
         } else {
-            if(textUsuario.equals("caycho") && textClave.equals("123456")){
-                Intent intent = new Intent(this,  PrincipalActivity.class);
+            if(textUsuario.equals("caycho") && textClave.equals("123456")) {
+                Intent intent = new Intent(this, PrincipalActivity.class);
+                startActivity(intent);
+            } else if(textUsuario.equals("admin") && textClave.equals("admin")){
+                Intent intent = new Intent(this, PrincipalActivity.class);
                 startActivity(intent);
             } else if(textUsuario.equals("rogger") && textClave.equals("789456")){
                 Intent intent = new Intent(this,  PrincipalActivity.class);
