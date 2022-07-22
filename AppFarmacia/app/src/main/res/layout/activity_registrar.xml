@@ -43,7 +43,6 @@
                 android:layout_marginRight="25dp"
                 android:background="@color/white"
                 android:hint="@string/nombre"
-                app:hintTextColor="@color/white"
                 app:startIconDrawable="@drawable/person">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -62,7 +61,6 @@
                 android:hint="@string/apellido"
                 android:paddingTop="10dp"
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/white"
                 app:startIconDrawable="@drawable/person">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -88,7 +86,7 @@
                 app:counterEnabled="true"
                 app:counterMaxLength="9"
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/white"
+                app:counterTextColor="@color/white"
                 app:startIconDrawable="@drawable/celar">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -116,7 +114,7 @@
                 app:counterEnabled="true"
                 app:counterMaxLength="8"
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/white"
+                app:counterTextColor="@color/white"
                 app:startIconDrawable="@drawable/documento">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -164,7 +162,7 @@
                 app:helperText="@string/ht_fc_nacimiento"
                 android:paddingTop="10dp"
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/white"
+                app:counterTextColor="@color/white"
                 app:startIconDrawable="@drawable/fecha"
                 android:hint="@string/nacimiento"
                 >
@@ -189,7 +187,7 @@
                 app:counterEnabled="true"
                 app:counterMaxLength="8"
                 app:endIconMode="password_toggle"
-                app:hintTextColor="@color/white"
+                app:counterTextColor="@color/white"
                 app:startIconDrawable="@drawable/candado">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -206,24 +204,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bt_Cancelar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:backgroundTint="@color/rojo_cancelar"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="@string/cancelar"
-                android:textSize="15dp"
-                app:icon="@drawable/no" />
-
+            android:orientation="vertical"
+            android:layout_margin="20dp">
             <Button
                 android:id="@+id/bt_Aceptar"
-                style="@style/Widget.MaterialComponents.Button.Icon"
-                android:layout_width="wrap_content"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:backgroundTint="@color/verde_aceptar"
@@ -231,7 +217,21 @@
                 android:paddingBottom="8dp"
                 android:text="@string/aceptar"
                 android:textSize="15dp"
-                app:icon="@drawable/yes" />
+                android:textColor="@color/white"/>
+            <Button
+                android:id="@+id/bt_Cancelar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/rojo_cancelar"
+                android:paddingTop="8dp"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:paddingBottom="8dp"
+                android:text="@string/cancelar"
+                android:textSize="15dp"
+                android:textColor="@color/white"/>
+
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

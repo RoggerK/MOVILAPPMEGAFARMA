@@ -42,7 +42,7 @@
                 android:hint="@string/Ingresa_nom"
                 android:paddingTop="10dp"
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/white">
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/lblUsu"
@@ -64,8 +64,6 @@
                 app:counterEnabled="true"
                 app:counterMaxLength="8"
                 app:endIconMode="password_toggle"
-                app:hintTextColor="@color/white"
-
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
